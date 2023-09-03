@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    sell
+{% endblock %}
+
+
+{% block styles %}
+
+.form-select{
+    width: 8%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    margin-top: -20px;
+}
+
+{% endblock %}
+
+{% block main %}
+    <h2>Sell</h2>
+    <form action="/sell" method="post">
+        <select class="form-select" aria-label="Default select example" autofocus name="symbol">
+            <option selected disabled>Symbol</option>
+            {% for s in shares %}
+                <option value="{{s['stock_symbol']}}">{{ s['stock_symbol'] }}</option>
+            {% endfor %}
+        </select>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="number" min="0">
+        </div>
+        <button class="btn btn-primary" type="submit">Sell</button>
+    </form>
+
+{% endblock %}

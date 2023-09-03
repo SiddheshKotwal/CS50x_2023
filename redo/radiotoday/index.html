@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+        padding: 20px;
+      }
+
+      .image-container img {
+        flex-shrink:0;
+        width: 300px;
+        border-radius: 8px;
+        margin-right: 30px;
+      }
+
+      .text-container {
+        text-align: left;
+      }
+
+      .text-container h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .text-container p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin: 0;
+      }
+
+      img {
+        width:50%;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        border-radius: 2%;
+      }
+
+      hr {
+        border-top: 2px solid black;
+        height: 2px;
+        width: 100%;
+        margin: 10px auto;
+      }
+
+      .carousel {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      .carousel {
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      }
+      .carousel-control-prev-icon,
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23ff0000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-.22.22-3.03 3.03L5.03 6.97l.22.22L7.47 4 5.25 1.78 5.25 0z'/%3E%3C/svg%3E");
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+        filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(2deg) brightness(104%) contrast(100%);
+      }
+
+      .carousel-control-prev:hover,
+      .carousel-control-next:hover {
+        filter: invert(90%) sepia(10%) saturate(100%) hue-rotate(180deg) brightness(90%) contrast(80%);
+      }
+
+      /* Set the width and height of the carousel container */
+      #carouselExampleDark {
+        width: 600px;
+        height: 400px;
+      }
+
+      /* Set the width and height of the carousel images */
+      #carouselExampleDark img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Set the width and height of the carousel controls */
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 10%;
+      }
+      h5 {
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      }
+      #searchbar {
+        width:400px;
+        position: relative;
+        top: 15px;
+      }
+      nav {
+        align-items: center;
+        text-align: center;
+        height: 120px;
+        background-color:#E5E4E2;
+        white-space: unset;
+      }
+      nav a {
+        font-family: Franklin Gothic Medium;
+        font-size:140%;
+        color:#ed1b25;
+        text-decoration: none;
+      }
+      nav li {
+        border-right: 2px solid #ed1b25;
+        padding-right: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        margin: 0 10px;
+      }
+      nav li:last-child {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+      #bar {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      #logo{
+        position: relative;
+        right: 635px;
+        top:-20px;
+        display: inline-block;
+      }
+      footer {
+      background-color: #333;
+      color: #fff;
+      font-size: 14px;
+      padding: 20px;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <!--#ec1c24-->
+    <header>
+      <nav>
+        <div class="container-fluid" id="searchbar">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" size="30">
+            <button class="btn btn-outline-danger" type="submit">Search</button>
+          </form>
+        </div>
+        <div id="logo">
+          <img src="radioshack-logo.png" style="width:15%; box-shadow:0px 0px 0px rgba(0, 0, 0, 0)">
+        </div>
+        <ul id="bar">
+          <li>
+            <a href="https://www.radioshack.com/rsstorelocator/rszip?1">Store Locator</a>
+          </li>
+          <li>
+            <a href="https://www.radioshack.com/rsfuture.html">Future Activities</a>
+          </li>
+          <li>
+            <a href="http://www.tandy.com/contacts/">Contacts</a>
+          </li>
+          <li>
+            <a href="http://www.tandy.com/press.html">Press Releases</a>
+          </li>
+          <li>
+            <a href="https://www.radioshack.com/history/">History and Information</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <br>
+    <p style="text-align:center; font-size:170%; font-family:Franklin Gothic Medium;">RadioShack's Latest Trends</p>
+    <div class="image-container">
+      <img src="mining.jpg" alt="Your Image">
+      <div class="text-container">
+        <h2>Best Crypto Mining Gear and Hardware</h2>
+        <p>Assembling a modest cryptocurrency mining system at home
+          can be the best option if the instability of digital currency
+          investment is overwhelming for you but you still want to get a
+          piece of the booming crypto cake. Is crypto mining still worth it
+          now that Ethereum has phased out mining along with its transition to a
+          Proof-of-Stake mechanism? The answer, which highly depends on a number of variables, is yes.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="crypto.png" alt="Your Image">
+      <div class="text-container">
+        <h2>Exciting Crypto Trends of 2022</h2>
+        <p>For the crypto world, this year has so far been a roller-coaster ride full of ups,
+          downs, highs and lows. IT professionals, investors, and enthusiasts have witnessed many
+          developments and woes, from supply-chain issues and sudden drops to potential regulations
+           on cryptocurrencies and widespread adoption. With the first, second, and third fiscal
+           quarters in the books and the last on track, we're looking at the patterns that might
+            define the remainder of 2022 and what 2023 might look like for crypto.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="investment.avif" alt="Your Image">
+      <div class="text-container">
+        <h2>Dos And Don'ts of Crypto Trading and Investing</h2>
+        <p>It has been more than a decade since Bitcoin’s first big leap.
+           You’d think that at this point, many people would be cryptocurrency
+            trading savants. However, a lot of traders still lose huge sums of
+             money or don't make a profit because they don't know when, why, or
+             how to sell (or hold) their crypto. Or, in the language of r/WallStreetBets degenerates, when to have diamond hands or go paper hands.</p>
+      </div>
+    </div>
+    <div class="image-container">
+      <img src="gaming.webp" alt="Your Image">
+      <div class="text-container">
+        <h2>How To Build A Gaming PC</h2>
+        <p>The finest technology investment you can make
+          is probably a gaming PC. A high-quality gaming system is
+           immensely more adaptable and has more durability than the
+            most robust streaming device, more capability than any video game console. Sorry console gamers! </p>
+      </div>
+    </div>
+    <br>
+    <p style="text-align:center; font-size:170%; font-family:Franklin Gothic Medium;">Shop By Category</p>
+    <hr>
+    <div id="carouselExampleDark" class="carousel carousel-dark slide mx-auto my-5" data-bs-ride="carousel" style="max-width: 800px;">
+      <!-- Carousel code here -->
+      <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img src="batteries.jpg" class="d-block w-100" alt="batteries">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:white">BATTERIES</h5>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="chair.jpg" class="d-block w-100" alt="chairs">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:white">GAMING</h5>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="lamp.jpg" class="d-block w-100" alt="lamps">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:white">LAMPS</h5>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="stereo.jpg" class="d-block w-100" alt="stereos">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:white">STEREOS AND HEADPHONES</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="circuit.jpg" class="d-block w-100" alt="tools and kits">
+            <div class="carousel-caption d-none d-md-block">
+              <h5 style="color:white ">TOOLS AND KITS</h5>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <footer>
+      <h6 style="font-family:arial">CUSTOMER SUPPORT</h6>
+      <div style="font-family:arial">
+        Contact Us <br>
+        Terms & Conditions <br>
+        Privacy Policy <br>
+        Returns & Warranties <br>
+        Order FAQs <br>
+        Shipping Information <br>
+        Rewards Program<br>
+        Affiliate Program Partnership</div>
+        <br>
+      <div style="font-family:arial">SIGN UP FOR EXCLUSIVE DISCOUNTS AND RADIOSHACK NEWS BY EMAIL</div>
+      <form>
+        <label for="email" style="font-family:arial">Subscribe to our newsletter:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address">
+        <input type="submit" value="Subscribe">
+      </form>
+      <br>
+      <div><a href="http://www.tandy.com/trademark.html">Copyright ©</a> 2022 RADIOSHACK ONLINE OPCO, LLC. All rights reserved.</div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    homepage
+{% endblock %}
+
+{% block styles %}
+    table {
+        background-color: transparent;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    table th,
+    table td {
+        padding: 0.75rem;
+        vertical-align: middle;
+    }
+
+    tbody tr:nth-of-type(odd) {
+        background-color: #f0f0f0;
+    }
+{% endblock %}
+
+{% block main %}
+    <h2>Portfolio</h2>
+    <table>
+        <thead>
+            <tr style="font-weight: bold;">
+                <td>Symbol</td>
+                <td>Name</td>
+                <td>Shares</td>
+                <td>Price</td>
+                <td>TOTAL</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for d in details %}
+            <tr>
+                <td>{{d["stock_symbol"]}}</td>
+                <td>{{d["stock_symbol"]}}</td>
+                <td>{{d["number_of_stocks"]}}</td>
+                <td>{{d["price_per_share"] | usd}}</td>
+                <td>{{d["total_price"] | usd}}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="font-weight: bold;">Cash</td>
+                <td>{{cash | usd}}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td style="font-weight: bold;">TOTAL</td>
+                <td>{{grand_total | usd}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

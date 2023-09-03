@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <script>
+        // TODO: Add code to check answers to questions
+
+        // This will run when page is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const questionDivs = document.querySelectorAll('.question');
+
+            questionDivs.forEach(function(questionDiv) {
+                const buttons = questionDiv.querySelectorAll('button');
+                const result = questionDiv.querySelector('.result')
+                buttons.forEach(function(button) {
+                    button.addEventListener('click', function(){
+
+                        // checking for answer and changing style as per the answer
+                        if(button.value == 'correct'){
+                            button.style.backgroundColor = 'springgreen';
+                            result.textContent = 'Correct!';
+                            }
+                        else if(button.value == 'wrong'){
+                            button.style.backgroundColor = '#E81828';
+                            result.innerHTML = 'Incorrect';
+                            };
+                    });
+                });
+            });
+        });
+
+        function getValue(){
+                const input = document.querySelector('#answer');
+                const sub = document.querySelector('.check');
+
+                const ans = input.value;
+                // Checking for submitted answer
+                if(ans == 'australia' || ans == 'Australia')
+                {
+                    input.style.backgroundColor = 'springgreen';
+                    input.style.color = 'black';
+                    sub.textContent = 'Correct!';
+                }
+                else{
+                    input.style.backgroundColor = '#E81828';
+                    input.style.color = 'white';
+                    sub.textContent = 'Incorrect';
+                }
+            }
+
+    </script>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <!-- question 1 -->
+                <div class="question">
+                    <h3> What is the name of the longest river in Africa? </h3>
+                    <button type='button' value="wrong"> Amazon </button>
+                    <button type='button' value="correct"> Nile </button>
+                    <button type='button' value="wrong"> Yangtze </button>
+                    <button type='button' value="wrong"> Mississippi </button>
+                    <p class="result"></p>
+                </div>
+
+                <!-- question 2 -->
+                <div class="question">
+                    <h3> What American city is the Golden Gate Bridge located in? </h3>
+                    <button type='button' value="correct"> San Francisco </button>
+                    <button type='button' value="wrong"> Chicago </button>
+                    <button type='button' value="wrong"> San Diego </button>
+                    <button type='button' value="wrong"> New York </button>
+                    <p class="result"></p>
+                </div>
+
+                <!-- question 3 -->
+                <div class="question">
+                    <h3> What is the capital of Canada? </h3>
+                    <button type='button' value="wrong"> Toronto </button>
+                    <button type='button' value="wrong"> Ontario </button>
+                    <button type='button' value="wrong"> Vancouver </button>
+                    <button type='button' value="correct"> Ottawa </button>
+                    <p class="result"></p>
+                </div>
+
+                <!-- question 4 -->
+                <div class="question">
+                    <h3> Which country is also called The Netherlands? </h3>
+                    <button type='button' value="wrong"> Andorra </button>
+                    <button type='button' value="correct"> Holland </button>
+                    <button type='button' value="wrong"> Austria </button>
+                    <button type='button' value="wrong"> Czechia </button>
+                    <p class="result"></p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Which country is both an island and a continent?</h3>
+                <!-- input field -->
+                <input id="answer" type="text">
+                <!-- submit button -->
+                <input type="submit" value="Check answer" onClick="getValue()">
+                <p class="check"></p>
+            </div>
+        </div>
+    </body>
+</html>

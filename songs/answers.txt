@@ -1,0 +1,11 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+
+    --> I would characterise audio aura of listener on the basis of ,maximum energy, danceability, and valence.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener.
+What better ways of calculating this aura would you propose?
+
+    --> I think this hypothesis might not represent the correct audio aura because we are taking average of energy which
+        eliminates the energy for particular aura that is listened more often.
+    --> So we should consider the audio aura on behalf of the amount of time person listened to particular energy,
+        the maximum time spent on the particular energy should be the audio aura of listener

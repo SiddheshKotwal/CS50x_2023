@@ -1,0 +1,11 @@
+{
+    "gitdoc.enabled": true,
+    "files.associations": {
+        "array": "c",
+        "memory": "c",
+        "functional": "c",
+        "tuple": "c",
+        "utility": "c",
+        "*.tcc": "c"
+    }
+}

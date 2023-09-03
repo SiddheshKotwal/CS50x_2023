@@ -1,0 +1,8 @@
+cs50
+asyncio
+aiohttp
+werkzeug
+flask
+flask_session
+pandas
+gunicorn
